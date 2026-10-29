@@ -98,7 +98,9 @@
     .profile-panel { position: relative; min-height: 360px; padding: 24px; background: var(--green); color: white; border-radius: 30px 30px 30px 7px; box-shadow: 0 24px 55px rgba(23,56,41,.18); transform: rotate(1deg); }
     .profile-panel::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,.18); border-radius: 22px 22px 22px 4px; pointer-events: none; }
     .profile-top { display: flex; justify-content: space-between; align-items: center; font-size: .78rem; color: rgba(255,255,255,.7); position: relative; z-index: 1; }
-    .profile-monogram { display: grid; place-items: center; width: 130px; height: 130px; margin: 44px auto 25px; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; color: #f8dfbd; font: 600 3.3rem "Manrope",sans-serif; letter-spacing: -.1em; box-shadow: 0 0 0 14px rgba(255,255,255,.04), 0 0 0 28px rgba(255,255,255,.025); }
+    .profile-photo { width: min(100%, 225px); height: 220px; margin: 28px auto 22px; overflow: hidden; border: 4px solid rgba(255,255,255,.36); border-radius: 22px 22px 22px 5px; box-shadow: 0 14px 36px rgba(0,0,0,.22); transform: rotate(-1deg); background: rgba(255,255,255,.1); }
+    .profile-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 23%; }
+    body[data-theme="dark"] .profile-photo { border-color: rgba(255,255,255,.28); }
     .profile-name { position: relative; z-index: 1; text-align: center; font: 700 1.4rem "Manrope",sans-serif; }
     .profile-role { position: relative; z-index: 1; text-align: center; color: rgba(255,255,255,.72); font-size: .9rem; }
     .profile-foot { position: relative; z-index: 1; display: flex; justify-content: space-between; margin-top: 29px; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.18); font-size: .75rem; color: rgba(255,255,255,.75); }
@@ -260,7 +262,7 @@
         </div>
         <aside class="profile-panel" aria-label="Professional profile">
           <div class="profile-top"><span>PROFESSIONAL PROFILE</span><span>01 / 04</span></div>
-          <div class="profile-monogram" aria-hidden="true">AA</div>
+          <div class="profile-photo"><img src="assets/aminat-profile.webp" alt="Professional portrait of Aminat Abesin"></div>
           <div class="profile-name">Aminat Abesin</div>
           <div class="profile-role">Customer Service &amp; Client Operations</div>
           <div class="profile-foot"><span>Based in Lagos, Nigeria</span><span>People-first mindset</span></div>
