@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f4ee">
+  <meta name="theme-color" content="#fcfaf5">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta name="description" content="Aminat Abesin — customer service and client operations professional with French C1 proficiency, Mandarin Chinese training, and experience across aviation, logistics, and real estate.">
   <title>Aminat Abesin — Customer Service & Client Operations</title>
@@ -12,18 +12,37 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper: #f6f4ee;
-      --paper-deep: #eeece3;
-      --ink: #17251f;
-      --muted: #68746d;
-      --green: #244b3a;
-      --green-dark: #173829;
-      --mint: #d9e6d9;
-      --orange: #d7784b;
-      --line: rgba(23, 37, 31, .14);
+      color-scheme: light;
+      --paper: #fcfaf5;
+      --paper-deep: #f0edff;
+      --ink: #211b31;
+      --muted: #6d657d;
+      --green: #6541df;
+      --green-dark: #2e205f;
+      --mint: #e5ddff;
+      --orange: #fa674f;
+      --aqua: #a6eee4;
+      --sun: #f5ee71;
+      --line: rgba(33, 27, 49, .14);
       --white: #fffefa;
       --radius: 22px;
-      --shadow: 0 18px 50px rgba(35, 55, 43, .08);
+      --shadow: 0 18px 50px rgba(48, 34, 92, .10);
+    }
+    body[data-theme="dark"] {
+      color-scheme: dark;
+      --paper: #15131e;
+      --paper-deep: #211d30;
+      --ink: #f7f3ff;
+      --muted: #b6adc9;
+      --green: #a994ff;
+      --green-dark: #100e18;
+      --mint: #342b4c;
+      --orange: #ff896f;
+      --aqua: #74dace;
+      --sun: #e8e568;
+      --line: rgba(247, 243, 255, .14);
+      --white: #211e2c;
+      --shadow: 0 18px 50px rgba(0, 0, 0, .24);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 88px; }
@@ -40,12 +59,12 @@
     h2 { margin-bottom: 16px; font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.1; }
     h3 { font-size: 1.15rem; line-height: 1.3; }
     .lede { max-width: 650px; color: var(--muted); font-size: clamp(1.05rem, 1.7vw, 1.22rem); line-height: 1.8; }
-    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(246, 244, 238, .92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+    .topbar { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
     .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 22px; }
     .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-family: "Manrope", sans-serif; font-weight: 800; letter-spacing: -.04em; }
     .brandmark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px 12px 12px 4px; background: var(--green); color: white; font-size: .95rem; letter-spacing: -.06em; }
     .navlinks { display: flex; align-items: center; gap: clamp(15px, 2.4vw, 30px); }
-    .navlinks a { color: #46564d; text-decoration: none; font-size: .9rem; font-weight: 600; transition: color .2s; }
+    .navlinks a { color: var(--ink); text-decoration: none; font-size: .9rem; font-weight: 600; transition: color .2s; }
     .navlinks a:hover { color: var(--orange); }
     .navlinks .nav-cta { padding: 11px 17px; color: white; border-radius: 999px; background: var(--green); }
     .navlinks .nav-cta:hover { color: white; background: var(--green-dark); }
@@ -71,7 +90,7 @@
     .profile-foot { position: relative; z-index: 1; display: flex; justify-content: space-between; margin-top: 29px; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.18); font-size: .75rem; color: rgba(255,255,255,.75); }
     .strip { background: var(--paper-deep); border-block: 1px solid var(--line); }
     .strip-inner { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; padding: 23px 0; }
-    .strip-item { display: flex; align-items: center; gap: 12px; color: #41554a; font-size: .88rem; font-weight: 700; }
+    .strip-item { display: flex; align-items: center; gap: 12px; color: var(--ink); font-size: .88rem; font-weight: 700; }
     .strip-icon { display: grid; place-items: center; flex: 0 0 auto; width: 37px; height: 37px; border-radius: 13px; background: rgba(36,75,58,.08); color: var(--green); font-size: 1rem; }
     section { padding: clamp(72px, 9vw, 112px) 0; }
     .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 38px; }
@@ -115,15 +134,42 @@
     .leadership-item strong { display: block; margin-bottom: 5px; font-size: .95rem; }
     .leadership-item span { color: var(--muted); font-size: .86rem; }
     .contact { padding-top: 30px; }
-    .contact-card { display: flex; justify-content: space-between; align-items: center; gap: 40px; padding: clamp(28px, 5vw, 52px); background: #e6e9dd; border: 1px solid rgba(36,75,58,.13); border-radius: 28px; }
+    .contact-card { display: flex; justify-content: space-between; align-items: center; gap: 40px; padding: clamp(28px, 5vw, 52px); background: var(--paper-deep); border: 1px solid var(--line); border-radius: 28px; }
     .contact-card h2 { max-width: 550px; margin-bottom: 12px; font-size: clamp(2rem, 4vw, 3.1rem); }
     .contact-card p { max-width: 520px; margin-bottom: 0; color: var(--muted); }
     .contact-actions { display: flex; flex-direction: column; gap: 10px; min-width: 210px; }
     footer { padding: 25px 0 35px; color: var(--muted); font-size: .82rem; }
     .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; padding-top: 20px; border-top: 1px solid var(--line); }
     .backtop { text-decoration: none; font-weight: 700; color: var(--green); }
+    .theme-toggle {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 42px; padding: 9px 13px; border: 1px solid var(--line);
+      border-radius: 999px; background: var(--white); color: var(--ink);
+      font: 700 .83rem "DM Sans", sans-serif; cursor: pointer; white-space: nowrap;
+      transition: transform .2s, border-color .2s, background .2s;
+    }
+    .theme-toggle:hover { transform: translateY(-1px); border-color: var(--green); }
+    .theme-icon { display: inline-block; color: var(--orange); font-size: 1rem; line-height: 1; }
+    .btn-tertiary { border: 1px solid transparent; background: var(--sun); color: #211b31; }
+    .btn-download, .btn-download-secondary { width: 100%; border: 0; cursor: pointer; font-family: "DM Sans", sans-serif; }
+    .btn-download { background: var(--sun); color: #211b31; }
+    .btn-download-secondary { background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.24); color: white; }
+    .cv-download { background: var(--paper-deep); }
+    .cv-download-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr); align-items: center; gap: clamp(32px, 7vw, 90px); }
+    .cv-download-copy h2 { max-width: 600px; }
+    .cv-download-copy p { max-width: 540px; color: var(--muted); }
+    .cv-download-panel { padding: 28px; border-radius: 26px 26px 26px 7px; background: var(--green-dark); color: white; box-shadow: var(--shadow); }
+    .cv-file-mark { position: relative; display: grid; place-items: center; width: 55px; height: 62px; margin-bottom: 19px; border-radius: 11px; background: var(--orange); color: #211b31; font: 800 1.2rem "Manrope", sans-serif; }
+    .cv-file-mark span { position: absolute; right: -12px; bottom: -7px; padding: 3px 6px; background: var(--aqua); color: #211b31; border-radius: 5px; font-size: .62rem; letter-spacing: .08em; }
+    .cv-file-info { display: grid; gap: 5px; margin-bottom: 22px; }
+    .cv-file-info strong { font-family: "Manrope", sans-serif; font-size: 1.12rem; }
+    .cv-file-info span, .download-note { color: rgba(255,255,255,.65); font-size: .82rem; }
+    .cv-download-panel .btn + .btn { margin-top: 10px; }
+    .download-note { margin: 16px 0 0; line-height: 1.5; }
+
     @media (max-width: 850px) {
       .hero-grid { grid-template-columns: 1fr; gap: 45px; }
+      .cv-download-inner { grid-template-columns: 1fr; }
       .profile-panel { width: min(100%, 390px); min-height: 330px; margin-inline: auto; }
       .strip-inner { grid-template-columns: repeat(2,1fr); }
       .section-heading { display: block; }
@@ -139,9 +185,11 @@
     @media (max-width: 560px) {
       .wrap { width: min(100% - 30px, 1160px); }
       .nav { min-height: 68px; }
-      .navlinks { gap: 11px; }
+      .navlinks { gap: 8px; }
       .navlinks a:not(.nav-cta) { display: none; }
-      .navlinks .nav-cta { padding: 10px 14px; font-size: .82rem; }
+      .navlinks .nav-cta { padding: 10px 12px; font-size: .78rem; }
+      .theme-toggle { min-height: 40px; padding: 8px 10px; }
+      .theme-label { display: none; }
       .hero { padding-top: 68px; }
       h1 { font-size: clamp(2.7rem, 13vw, 4rem); }
       .strip-inner { gap: 14px 10px; }
@@ -154,6 +202,7 @@
       .leadership-list { grid-template-columns: 1fr; }
       .profile-panel { padding: 20px; }
       .actions .btn { width: 100%; }
+      .cv-download-panel { padding: 23px; }
       .contact-actions { flex-direction: column; width: 100%; }
       .contact-actions .btn { width: 100%; }
     }
@@ -163,7 +212,7 @@
     }
   </style>
 </head>
-<body>
+<body data-theme="light">
   <header class="topbar">
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Aminat Abesin, home">
@@ -174,6 +223,9 @@
         <a href="#experience">Experience</a>
         <a href="#languages">Languages</a>
         <a class="nav-cta" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark mode</span>
+        </button>
       </div>
     </nav>
   </header>
@@ -187,7 +239,8 @@
           <p class="lede">I'm Aminat Abesin, a customer service and client operations professional with experience across aviation, logistics, and real estate. I bring thoughtful communication, careful follow-through, and a multilingual perspective to every customer interaction.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#experience">Explore my experience <span aria-hidden="true">↘</span></a>
-            <a class="btn btn-secondary" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="#download-cv">Download my CV <span aria-hidden="true">↓</span></a>
+            <a class="btn btn-tertiary" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
           </div>
           <div class="hero-note"><span class="dot" aria-hidden="true"></span> Open to customer service, client experience, and operations opportunities.</div>
         </div>
@@ -347,6 +400,24 @@
       </div>
     </section>
 
+
+    <section class="cv-download" id="download-cv">
+      <div class="wrap cv-download-inner">
+        <div class="cv-download-copy">
+          <span class="eyebrow">CV &amp; resources</span>
+          <h2>My experience, ready to take with you.</h2>
+          <p>Download a recruiter-friendly CV or save an editable copy for your records. The files are generated directly in your browser.</p>
+        </div>
+        <div class="cv-download-panel">
+          <div class="cv-file-mark" aria-hidden="true">AA<span>CV</span></div>
+          <div class="cv-file-info"><strong>Abesin Oluwaseun Aminat</strong><span>Master CV · customer service &amp; client operations</span></div>
+          <button class="btn btn-download" type="button" id="download-pdf">Download CV (PDF) <span aria-hidden="true">↓</span></button>
+          <button class="btn btn-download-secondary" type="button" id="download-doc">Editable CV (Word) <span aria-hidden="true">↗</span></button>
+          <p class="download-note">PDF for applications · editable Word-compatible copy for updates</p>
+        </div>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
       <div class="wrap">
         <div class="contact-card">
@@ -367,6 +438,191 @@
   <footer>
     <div class="footer-inner wrap"><span>© <span id="year">2026</span> Aminat Abesin. Built around thoughtful service.</span><a class="backtop" href="#top">Back to top ↑</a></div>
   </footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    (() => {
+      const body = document.body;
+      const toggle = document.getElementById("theme-toggle");
+      const icon = toggle.querySelector(".theme-icon");
+      const label = toggle.querySelector(".theme-label");
+      const setTheme = (theme, persist = true) => {
+        const dark = theme === "dark";
+        body.dataset.theme = dark ? "dark" : "light";
+        toggle.setAttribute("aria-pressed", String(dark));
+        toggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+        icon.textContent = dark ? "☀" : "☾";
+        label.textContent = dark ? "Light mode" : "Dark mode";
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", dark ? "#15131e" : "#fcfaf5");
+        if (persist) {
+          try { localStorage.setItem("aminat-theme", theme); } catch (_) {}
+        }
+      };
+      let savedTheme = null;
+      try { savedTheme = localStorage.getItem("aminat-theme"); } catch (_) {}
+      setTheme(savedTheme === "dark" ? "dark" : "light", false);
+      toggle.addEventListener("click", () => setTheme(body.dataset.theme === "dark" ? "light" : "dark"));
+
+      const cv = {
+        name: "Abesin Oluwaseun Aminat",
+        role: "CUSTOMER SERVICE & CLIENT OPERATIONS",
+        contact: "Lagos, Nigeria | +234 916 207 0665 | aminatabesin523@gmail.com",
+        summary: "Customer service and client operations professional with experience across aviation, logistics, and real estate. Handles customer enquiries, reservations, complaints, travel-agent relationships, transaction paperwork, and client follow-up. French C1 proficiency with ongoing Mandarin Chinese training at HSK 2 level through the Confucius Institute.",
+        strengths: [
+          "Customer support and client relations",
+          "Complaint handling, escalation, and issue resolution",
+          "Ticketing, reservations, fare rules, and travel-agent coordination",
+          "Client follow-up, property transaction paperwork, and documentation",
+          "Customer records, CRM data, administrative support, and coordination",
+          "Multichannel communication and cross-team collaboration"
+        ],
+        experience: [
+          { title: "Administrative Assistant", company: "Magabby Logistics", dates: "2026 - Present", bullets: [
+            "Handle customer complaints and work toward resolution when management intervention is not required.",
+            "Support shipment tracking, documentation updates, and customer communication.",
+            "Maintain organised transaction and client records while supporting daily operations."
+          ]},
+          { title: "Airfare Ticketing & Reservations / Customer Support", company: "Abilfat Aviation Company", dates: "2023 - 2026", bullets: [
+            "Handle approximately 50 customer interactions per day, responding to enquiries and supporting ticket reservations.",
+            "Manage travel-agent relationships and guide customers on bookings, fare rules, changes, and related service requests.",
+            "Communicate with customers and partners to clarify information, follow up on requests, and support issue resolution.",
+            "Maintain accurate booking information, customer records, and supporting documentation."
+          ]},
+          { title: "Administrative Assistant", company: "TUNEXWORLD Homes and Properties", dates: "2017 - 2020", bullets: [
+            "Managed client records, transaction paperwork, and administrative documentation.",
+            "Followed up with clients and supported property transactions through the closing process.",
+            "Contributed to coordinating at least three property transactions per month alongside other team members.",
+            "Coordinated operational tasks and communicated with internal and external stakeholders."
+          ]}
+        ],
+        education: [
+          "B.A.Ed. French Education | Tai Solarin University of Education (TASUED) | 2019 - 2023",
+          "Certificate in French Language | IUP Pan Africa School, Porto-Novo, Benin Republic | 2022",
+          "Diploma in Airfare Ticketing & Reservation | Abilfat Aviation Business School | 2024",
+          "Mandarin Chinese professional language course | Confucius Institute | HSK 2 level, currently learning",
+          "HRM & Customer Service | Mastercard"
+        ],
+        languages: [
+          "French: C1 proficiency",
+          "Mandarin Chinese: HSK 2 level, currently learning",
+          "English: Fluent",
+          "Yoruba: Native"
+        ],
+        leadership: [
+          "Vice President, National French Students Association (TASUED Chapter), 2023",
+          "Regional Secretary, Lions Club, 2023",
+          "CDS Secretary, NYSC (ICT & Education), 2025"
+        ],
+        skills: [
+          "Customer service and client relations",
+          "Customer enquiry management and complaint handling",
+          "Ticketing, reservation support, and travel-agent coordination",
+          "Shipment tracking and logistics documentation",
+          "Administrative and records management",
+          "CRM systems and customer data",
+          "Microsoft Office: Word, Excel, and internet tools",
+          "Problem solving, organisation, multitasking, and time management"
+        ]
+      };
+      const ascii = (value) => String(value)
+        .replace(/[\u2010-\u2015\u2212]/g, "-")
+        .replace(/[\u2018\u2019]/g, "'").replace(/[\u201c\u201d]/g, '"')
+        .replace(/\u2022/g, "-").replace(/\u00b7/g, "|")
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^\x20-\x7e]/g, "");
+      const esc = (value) => ascii(value).replace(/\\/g, "\\\\").replace(/\(/g, "\\(").replace(/\)/g, "\\)");
+      const colorText = (color) => color.map(n => n.toFixed(3)).join(" ");
+      function buildPdf() {
+        const pages = [[], []];
+        const add = (page, text, size = 10, bold = false, color = [0.15,0.12,0.23], gap = 4) => {
+          const max = Math.max(35, Math.floor(500 / (size * 0.49)));
+          const words = ascii(text).split(/\s+/);
+          let lines = [], line = "";
+          words.forEach(word => {
+            const trial = line ? line + " " + word : word;
+            if (trial.length > max && line) { lines.push(line); line = word; } else line = trial;
+          });
+          if (line) lines.push(line);
+          lines.forEach((txt, i) => {
+            const y = page.y;
+            page.ops.push("BT /" + (bold ? "F2" : "F1") + " " + size + " Tf " + colorText(color) + " rg 50 " + y.toFixed(2) + " Td (" + esc(txt) + ") Tj ET");
+            page.y -= size + (i === lines.length - 1 ? gap : 3);
+          });
+        };
+        const section = (page, title) => {
+          page.y -= 7;
+          add(page, title.toUpperCase(), 10, true, [0.39,0.25,0.87], 8);
+          page.ops.push("0.98 0.40 0.31 rg 50 " + (page.y + 2).toFixed(2) + " 34 2 re f");
+          page.y -= 3;
+        };
+        const bullet = (page, text) => add(page, "- " + text, 9, false, [0.25,0.23,0.31], 3);
+        pages.forEach((p, index) => { p.ops = []; p.y = 784; });
+        const p1 = pages[0], p2 = pages[1];
+        p1.ops.push("0.39 0.25 0.87 rg 50 800 5 24 re f", "0.98 0.40 0.31 rg 58 800 16 5 re f", "0.65 0.93 0.89 rg 78 800 16 5 re f");
+        add(p1, cv.name, 22, true, [0.15,0.12,0.23], 4);
+        add(p1, cv.role, 9, true, [0.39,0.25,0.87], 5);
+        add(p1, cv.contact, 8, false, [0.39,0.36,0.46], 12);
+        section(p1, "Professional summary"); add(p1, cv.summary, 9.5, false, [0.20,0.18,0.27], 4);
+        section(p1, "Core strengths"); cv.strengths.forEach(x => bullet(p1, x));
+        section(p1, "Professional experience");
+        add(p1, cv.experience[0].title + " | " + cv.experience[0].company + " | " + cv.experience[0].dates, 9.4, true, [0.15,0.12,0.23], 4);
+        cv.experience[0].bullets.forEach(x => bullet(p1, x));
+        p1.y -= 4;
+        add(p1, cv.experience[1].title + " | " + cv.experience[1].company + " | " + cv.experience[1].dates, 9.4, true, [0.15,0.12,0.23], 4);
+        cv.experience[1].bullets.forEach(x => bullet(p1, x));
+        p1.ops.push("0.39 0.25 0.87 rg 50 35 495 1 re f");
+        add(p1, "AMINAT ABESIN  |  PROFESSIONAL PORTFOLIO", 7.5, false, [0.47,0.43,0.55], 0);
+
+        p2.ops.push("0.39 0.25 0.87 rg 50 800 5 24 re f", "0.98 0.40 0.31 rg 58 800 16 5 re f", "0.65 0.93 0.89 rg 78 800 16 5 re f");
+        add(p2, "Abesin Oluwaseun Aminat", 18, true, [0.15,0.12,0.23], 4);
+        add(p2, "CUSTOMER SERVICE & CLIENT OPERATIONS  |  CONTINUED", 8.5, true, [0.39,0.25,0.87], 13);
+        section(p2, "Professional experience - continued");
+        add(p2, cv.experience[2].title + " | " + cv.experience[2].company + " | " + cv.experience[2].dates, 9.4, true, [0.15,0.12,0.23], 4);
+        cv.experience[2].bullets.forEach(x => bullet(p2, x));
+        section(p2, "Education and professional training"); cv.education.forEach(x => bullet(p2, x));
+        section(p2, "Languages"); cv.languages.forEach(x => bullet(p2, x));
+        section(p2, "Leadership"); cv.leadership.forEach(x => bullet(p2, x));
+        section(p2, "Additional skills"); cv.skills.forEach(x => bullet(p2, x));
+        p2.ops.push("0.39 0.25 0.87 rg 50 35 495 1 re f");
+        add(p2, "References available on request", 8, false, [0.47,0.43,0.55], 0);
+
+        const enc = new TextEncoder();
+        const streams = pages.map(p => p.ops.join("\n"));
+        const objects = [];
+        objects[1] = "<< /Type /Catalog /Pages 2 0 R >>";
+        objects[2] = "<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>";
+        objects[3] = "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 7 0 R >>";
+        objects[4] = "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 8 0 R >>";
+        objects[5] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>";
+        objects[6] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>";
+        objects[7] = "<< /Length " + enc.encode(streams[0]).length + " >>\nstream\n" + streams[0] + "\nendstream";
+        objects[8] = "<< /Length " + enc.encode(streams[1]).length + " >>\nstream\n" + streams[1] + "\nendstream";
+        let pdf = "%PDF-1.4\n%CV portfolio\n";
+        const offsets = [0];
+        for (let i = 1; i < objects.length; i++) {
+          offsets[i] = enc.encode(pdf).length;
+          pdf += i + " 0 obj\n" + objects[i] + "\nendobj\n";
+        }
+        const xref = enc.encode(pdf).length;
+        pdf += "xref\n0 " + objects.length + "\n0000000000 65535 f \n";
+        for (let i = 1; i < objects.length; i++) pdf += String(offsets[i]).padStart(10, "0") + " 00000 n \n";
+        pdf += "trailer\n<< /Size " + objects.length + " /Root 1 0 R >>\nstartxref\n" + xref + "\n%%EOF";
+        return enc.encode(pdf);
+      }
+      function download(name, blob) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1500);
+      }
+      document.getElementById("download-pdf").addEventListener("click", () => {
+        download("Abesin_Oluwaseun_Aminat_Master_CV.pdf", new Blob([buildPdf()], { type: "application/pdf" }));
+      });
+      document.getElementById("download-doc").addEventListener("click", () => {
+        const bullets = arr => arr.map(x => "<li>" + x + "</li>").join("");
+        const doc = '<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font:11pt Arial,sans-serif;color:#211b31;line-height:1.45;margin:36pt}h1{font-size:23pt;margin-bottom:2pt;color:#6541df}h2{font-size:13pt;margin:18pt 0 5pt;border-bottom:2px solid #fa674f;padding-bottom:3pt}h3{font-size:11pt;margin:10pt 0 2pt}p,li{font-size:10pt}ul{margin-top:4pt} .sub{color:#6541df;font-weight:bold}</style></head><body><h1>' + cv.name + '</h1><p class="sub">' + cv.role + '</p><p>' + cv.contact + '</p><h2>Professional Summary</h2><p>' + cv.summary + '</p><h2>Core Strengths</h2><ul>' + bullets(cv.strengths) + '</ul><h2>Professional Experience</h2>' + cv.experience.map(e => '<h3>' + e.title + '</h3><p class="sub">' + e.company + ' | ' + e.dates + '</p><ul>' + bullets(e.bullets) + '</ul>').join('') + '<h2>Education &amp; Professional Training</h2><ul>' + bullets(cv.education) + '</ul><h2>Languages</h2><ul>' + bullets(cv.languages) + '</ul><h2>Leadership</h2><ul>' + bullets(cv.leadership) + '</ul><h2>Additional Skills</h2><ul>' + bullets(cv.skills) + '</ul><p>References available on request.</p></body></html>';
+        download("Abesin_Oluwaseun_Aminat_Master_CV.doc", new Blob([doc], { type: "application/msword;charset=utf-8" }));
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
