@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fcfaf5">
+  <meta name="theme-color" content="#fffaf3">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta name="description" content="Aminat Abesin — customer service and client operations professional with French C1 proficiency, Mandarin Chinese training, and experience across aviation, logistics, and real estate.">
   <title>Aminat Abesin — Customer Service & Client Operations</title>
@@ -13,34 +13,42 @@
   <style>
     :root {
       color-scheme: light;
-      --paper: #fcfaf5;
-      --paper-deep: #f0edff;
-      --ink: #211b31;
-      --muted: #6d657d;
-      --green: #6541df;
-      --green-dark: #2e205f;
-      --mint: #e5ddff;
-      --orange: #fa674f;
-      --aqua: #a6eee4;
-      --sun: #f5ee71;
-      --line: rgba(33, 27, 49, .14);
+      --paper: #fffaf3;
+      --paper-deep: #fff0e8;
+      --ink: #251a32;
+      --muted: #70647a;
+      --green: #6e38e8;
+      --green-dark: #2d174f;
+      --mint: #d7f7ee;
+      --orange: #ff6248;
+      --aqua: #8be7d7;
+      --sun: #f9eb62;
+      --hero-bg: #ff694f;
+      --hero-heading: #251a32;
+      --hero-emphasis: #fff9ed;
+      --hero-copy: #482c32;
+      --line: rgba(37, 26, 50, .14);
       --white: #fffefa;
       --radius: 22px;
-      --shadow: 0 18px 50px rgba(48, 34, 92, .10);
+      --shadow: 0 18px 50px rgba(62, 35, 92, .10);
     }
     body[data-theme="dark"] {
       color-scheme: dark;
-      --paper: #15131e;
-      --paper-deep: #211d30;
-      --ink: #f7f3ff;
-      --muted: #b6adc9;
-      --green: #a994ff;
-      --green-dark: #100e18;
-      --mint: #342b4c;
+      --paper: #15131d;
+      --paper-deep: #211b2d;
+      --ink: #f8f3ff;
+      --muted: #b9afc9;
+      --green: #b6a0ff;
+      --green-dark: #0f0d17;
+      --mint: #2c3f3a;
       --orange: #ff896f;
-      --aqua: #74dace;
-      --sun: #e8e568;
-      --line: rgba(247, 243, 255, .14);
+      --aqua: #8ceadd;
+      --sun: #f1e75d;
+      --hero-bg: #201a2b;
+      --hero-heading: #fff8ef;
+      --hero-emphasis: #ff8b72;
+      --hero-copy: #c8bfd3;
+      --line: rgba(248, 243, 255, .14);
       --white: #211e2c;
       --shadow: 0 18px 50px rgba(0, 0, 0, .24);
     }
@@ -68,9 +76,15 @@
     .navlinks a:hover { color: var(--orange); }
     .navlinks .nav-cta { padding: 11px 17px; color: white; border-radius: 999px; background: var(--green); }
     .navlinks .nav-cta:hover { color: white; background: var(--green-dark); }
-    .hero { position: relative; overflow: hidden; padding: clamp(70px, 10vw, 130px) 0 82px; }
-    .hero::after { content: ""; position: absolute; z-index: -1; width: 420px; height: 420px; top: 24px; right: -170px; border: 1px solid rgba(36,75,58,.13); border-radius: 50%; box-shadow: 0 0 0 48px rgba(36,75,58,.025), 0 0 0 96px rgba(36,75,58,.025); }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); align-items: center; gap: 55px; }
+    .hero { position: relative; overflow: hidden; padding: clamp(70px, 10vw, 130px) 0 82px; background: var(--hero-bg); transition: background .25s ease; }
+    .hero h1 { color: var(--hero-heading); }
+    .hero h1 span { color: var(--hero-emphasis); }
+    .hero .eyebrow { color: var(--hero-heading); }
+    .hero .eyebrow::before { background: var(--hero-heading); }
+    .hero .lede, .hero .hero-note { color: var(--hero-copy); }
+    .hero .hero-note .dot { background: var(--hero-emphasis); }
+    .hero::after { content: ""; position: absolute; z-index: 0; pointer-events: none; width: 420px; height: 420px; top: 24px; right: -170px; border: 1px solid color-mix(in srgb, var(--hero-heading) 18%, transparent); border-radius: 50%; box-shadow: 0 0 0 48px color-mix(in srgb, var(--hero-heading) 3%, transparent), 0 0 0 96px color-mix(in srgb, var(--hero-heading) 3%, transparent); }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); align-items: center; gap: 55px; }
     .hero-copy .eyebrow { margin-bottom: 25px; }
     .hero-copy .lede { margin-bottom: 30px; }
     .actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -451,7 +465,7 @@
         toggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
         icon.textContent = dark ? "☀" : "☾";
         label.textContent = dark ? "Light mode" : "Dark mode";
-        document.querySelector('meta[name="theme-color"]').setAttribute("content", dark ? "#15131e" : "#fcfaf5");
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", dark ? "#15131d" : "#fffaf3");
         if (persist) {
           try { localStorage.setItem("aminat-theme", theme); } catch (_) {}
         }
