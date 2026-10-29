@@ -154,7 +154,7 @@ function buildPdf() {
     textBlock(job.company + " | " + job.period, { size: 8.4, bold: true, color: purple, gap: 2 });
     job.points.forEach(bullet); y += 2;
   });
-  sectionTitle("Education & professional training"); cv.education.forEach(bullet);
+  sectionTitle("Education & professional training"); cv.education.forEach(bullet); bullet("HRM & Customer Service | Mastercard");
   sectionTitle("Languages"); cv.languages.forEach(bullet);
   sectionTitle("Leadership"); cv.leadership.forEach(bullet);
   for (let i = 1; i <= doc.getNumberOfPages(); i++) {
@@ -169,7 +169,7 @@ function downloadWord() {
   const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   const list = (arr) => "<ul>" + arr.map((v) => "<li>" + esc(v) + "</li>").join("") + "</ul>";
   const jobs = experience.map((job) => "<h3>" + esc(job.role) + "</h3><p class='meta'>" + esc(job.company + " | " + job.period) + "</p>" + list(job.points)).join("");
-  const html = `<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;color:#251a32;line-height:1.45;margin:34pt}h1{font-size:23pt;margin-bottom:3pt}h2{font-size:13pt;color:#6e38e8;border-bottom:2px solid #ff6248;padding-bottom:4pt;margin-top:19pt}h3{font-size:11pt;margin:12pt 0 2pt}.meta{font-weight:bold;color:#6e38e8;font-size:9pt}p,li{font-size:10pt}ul{margin-top:4pt}.title{font-weight:bold;color:#6e38e8;letter-spacing:1pt;font-size:9pt}.muted{color:#70647a;font-size:9pt}</style></head><body><h1>${esc(cv.name)}</h1><p class="title">${esc(cv.title)}</p><p class="muted">${esc(cv.contact)}</p><h2>Professional Summary</h2><p>${esc(cv.summary)}</p><h2>Core Strengths</h2>${list(cv.strengths)}<h2>Professional Experience</h2>${jobs}<h2>Education &amp; Professional Training</h2>${list(cv.education)}<h2>Languages</h2>${list(cv.languages)}<h2>Leadership</h2>${list(cv.leadership)}<p>References available on request.</p></body></html>`;
+  const html = `<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;color:#251a32;line-height:1.45;margin:34pt}h1{font-size:23pt;margin-bottom:3pt}h2{font-size:13pt;color:#6e38e8;border-bottom:2px solid #ff6248;padding-bottom:4pt;margin-top:19pt}h3{font-size:11pt;margin:12pt 0 2pt}.meta{font-weight:bold;color:#6e38e8;font-size:9pt}p,li{font-size:10pt}ul{margin-top:4pt}.title{font-weight:bold;color:#6e38e8;letter-spacing:1pt;font-size:9pt}.muted{color:#70647a;font-size:9pt}</style></head><body><h1>${esc(cv.name)}</h1><p class="title">${esc(cv.title)}</p><p class="muted">${esc(cv.contact)}</p><h2>Professional Summary</h2><p>${esc(cv.summary)}</p><h2>Core Strengths</h2>${list(cv.strengths)}<h2>Professional Experience</h2>${jobs}<h2>Education &amp; Professional Training</h2>${list(cv.education.concat("HRM & Customer Service | Mastercard"))}<h2>Languages</h2>${list(cv.languages)}<h2>Leadership</h2>${list(cv.leadership)}<p>References available on request.</p></body></html>`;
   const blob = new Blob(["\ufeff", html], { type: "application/msword;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a"); a.href = url; a.download = "Abesin_Oluwaseun_Aminat_Master_CV.doc";
