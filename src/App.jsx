@@ -251,20 +251,20 @@ export default function App() {
           <div className="hero-orbit hero-orbit--two" aria-hidden="true"/>
           <div className="hero-grid container">
             <div className="hero-copy">
-              <motion.div initial={reduceMotion ? false : {opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:.5}} className="eyebrow"><span className="eyebrow-dot"/> CUSTOMER SERVICE · MULTILINGUAL COMMUNICATION</motion.div>
-              <motion.h1 initial={reduceMotion ? false : {opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.08}} className="hero-title">Every customer<br/>deserves to feel <span>understood.</span></motion.h1>
-              <motion.p initial={reduceMotion ? false : {opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.15}} className="hero-intro">I'm Aminat — a customer service and client operations professional who brings care, clarity, and follow-through to every conversation. With experience across aviation, logistics, and real estate, I help people move from questions to solutions.</motion.p>
+              <motion.div initial={reduceMotion ? false : {opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:.5}} className="eyebrow"><span className="eyebrow-dot"/> CUSTOMER SERVICE · CLIENT SUPPORT · OPERATIONS</motion.div>
+              <motion.h1 initial={reduceMotion ? false : {opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.08}} className="hero-title">Customer Service<br/><span>&amp; Client Operations</span></motion.h1>
+              <motion.p initial={reduceMotion ? false : {opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.15}} className="hero-intro">Customer service and client operations professional with experience across aviation, logistics, and real estate. Skilled in handling customer enquiries, managing ticket reservations, coordinating with travel agents, resolving complaints, maintaining documentation, and following up with clients. Offers C1 French proficiency and ongoing Mandarin Chinese training through the Confucius Institute.</motion.p>
               <motion.div initial={reduceMotion ? false : {opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.22}} className="hero-actions">
                 <button className="button button--dark" onClick={buildPdf}><Download size={17}/> Download my CV <ArrowDownRight size={17}/></button>
                 <ButtonLink href="#experience" kind="outline">Explore my work <ArrowDown size={16}/></ButtonLink>
               </motion.div>
-              <div className="hero-signals"><span><span className="signal-dot"/>Open to new opportunities</span><span><MapPin size={15}/> Lagos, Nigeria · Open to global roles</span></div>
+              <div className="hero-signals"><span><span className="signal-dot"/>Open to customer service opportunities</span><span><MapPin size={15}/> Lagos, Nigeria · Remote, hybrid &amp; on-site</span></div>
             </div>
             <motion.div className="hero-visual" initial={reduceMotion ? false : {opacity:0,scale:.94,y:18}} animate={{opacity:1,scale:1,y:0}} transition={{duration:.75,delay:.12}}>
-              <div className="portrait-frame"><img src="/assets/aminat-profile.webp" alt="Professional portrait of Aminat Abesin" fetchPriority="high"/><span className="portrait-sticker">People<br/>first <Sparkles size={17}/></span></div>
+              <div className="portrait-frame"><img src="/assets/aminat-profile.webp" alt="Professional portrait of Aminat Abesin" fetchPriority="high"/><span className="portrait-sticker">CLIENT<br/>SUPPORT <BriefcaseBusiness size={16}/></span></div>
               <motion.div className="floating-card floating-card--top" animate={reduceMotion ? {} : {y:[0,-7,0]}} transition={{duration:4,repeat:Infinity,ease:"easeInOut"}}><span className="mini-icon mini-icon--mint"><Languages size={18}/></span><span><strong>French C1</strong><small>Multilingual service</small></span></motion.div>
               <motion.div className="floating-card floating-card--bottom" animate={reduceMotion ? {} : {y:[0,6,0]}} transition={{duration:4.5,repeat:Infinity,ease:"easeInOut"}}><span className="mini-icon mini-icon--yellow"><UserRoundCheck size={18}/></span><span><strong>50+ interactions</strong><small>Handled per day in aviation</small></span></motion.div>
-              <div className="portrait-note">Curious by nature. Customer-minded by choice.</div>
+              <div className="portrait-note">Customer service · Client operations</div>
             </motion.div>
           </div>
           <div className="hero-bottom container"><span>SCROLL TO EXPLORE</span><span className="hero-bottom-line"/><span>01 — 05</span></div>
