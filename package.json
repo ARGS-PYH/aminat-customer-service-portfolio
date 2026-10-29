@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/prepare-profile-image.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/prepare-profile-image.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },
