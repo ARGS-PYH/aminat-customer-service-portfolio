@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <meta name="description" content="Aminat Abesin — customer service and client operations professional with French C1 proficiency, Mandarin Chinese training, and experience across aviation, logistics, and real estate.">
+  <title>Aminat Abesin — Customer Service & Client Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f4ee;
+      --paper-deep: #eeece3;
+      --ink: #17251f;
+      --muted: #68746d;
+      --green: #244b3a;
+      --green-dark: #173829;
+      --mint: #d9e6d9;
+      --orange: #d7784b;
+      --line: rgba(23, 37, 31, .14);
+      --white: #fffefa;
+      --radius: 22px;
+      --shadow: 0 18px 50px rgba(35, 55, 43, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; line-height: 1.65; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .wrap { width: min(1160px, calc(100% - 44px)); margin-inline: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--green); font-size: .76rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 23px; height: 2px; background: var(--orange); display: inline-block; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: "Manrope", sans-serif; letter-spacing: -.045em; }
+    h1 { max-width: 760px; margin-bottom: 22px; font-size: clamp(2.8rem, 7vw, 5.65rem); font-weight: 700; line-height: .99; }
+    h1 span { color: var(--green); }
+    h2 { margin-bottom: 16px; font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.1; }
+    h3 { font-size: 1.15rem; line-height: 1.3; }
+    .lede { max-width: 650px; color: var(--muted); font-size: clamp(1.05rem, 1.7vw, 1.22rem); line-height: 1.8; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(246, 244, 238, .92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 22px; }
+    .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-family: "Manrope", sans-serif; font-weight: 800; letter-spacing: -.04em; }
+    .brandmark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px 12px 12px 4px; background: var(--green); color: white; font-size: .95rem; letter-spacing: -.06em; }
+    .navlinks { display: flex; align-items: center; gap: clamp(15px, 2.4vw, 30px); }
+    .navlinks a { color: #46564d; text-decoration: none; font-size: .9rem; font-weight: 600; transition: color .2s; }
+    .navlinks a:hover { color: var(--orange); }
+    .navlinks .nav-cta { padding: 11px 17px; color: white; border-radius: 999px; background: var(--green); }
+    .navlinks .nav-cta:hover { color: white; background: var(--green-dark); }
+    .hero { position: relative; overflow: hidden; padding: clamp(70px, 10vw, 130px) 0 82px; }
+    .hero::after { content: ""; position: absolute; z-index: -1; width: 420px; height: 420px; top: 24px; right: -170px; border: 1px solid rgba(36,75,58,.13); border-radius: 50%; box-shadow: 0 0 0 48px rgba(36,75,58,.025), 0 0 0 96px rgba(36,75,58,.025); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); align-items: center; gap: 55px; }
+    .hero-copy .eyebrow { margin-bottom: 25px; }
+    .hero-copy .lede { margin-bottom: 30px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 14px 19px; border-radius: 999px; font-size: .94rem; font-weight: 700; text-decoration: none; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--green); color: white; }
+    .btn-primary:hover { background: var(--green-dark); }
+    .btn-secondary { border: 1px solid var(--line); background: rgba(255,254,250,.6); }
+    .hero-note { margin-top: 32px; display: flex; gap: 11px; align-items: center; color: var(--muted); font-size: .88rem; }
+    .dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; flex: 0 0 auto; }
+    .profile-panel { position: relative; min-height: 360px; padding: 24px; background: var(--green); color: white; border-radius: 30px 30px 30px 7px; box-shadow: 0 24px 55px rgba(23,56,41,.18); transform: rotate(1deg); }
+    .profile-panel::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,.18); border-radius: 22px 22px 22px 4px; pointer-events: none; }
+    .profile-top { display: flex; justify-content: space-between; align-items: center; font-size: .78rem; color: rgba(255,255,255,.7); position: relative; z-index: 1; }
+    .profile-monogram { display: grid; place-items: center; width: 130px; height: 130px; margin: 44px auto 25px; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; color: #f8dfbd; font: 600 3.3rem "Manrope",sans-serif; letter-spacing: -.1em; box-shadow: 0 0 0 14px rgba(255,255,255,.04), 0 0 0 28px rgba(255,255,255,.025); }
+    .profile-name { position: relative; z-index: 1; text-align: center; font: 700 1.4rem "Manrope",sans-serif; }
+    .profile-role { position: relative; z-index: 1; text-align: center; color: rgba(255,255,255,.72); font-size: .9rem; }
+    .profile-foot { position: relative; z-index: 1; display: flex; justify-content: space-between; margin-top: 29px; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.18); font-size: .75rem; color: rgba(255,255,255,.75); }
+    .strip { background: var(--paper-deep); border-block: 1px solid var(--line); }
+    .strip-inner { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; padding: 23px 0; }
+    .strip-item { display: flex; align-items: center; gap: 12px; color: #41554a; font-size: .88rem; font-weight: 700; }
+    .strip-icon { display: grid; place-items: center; flex: 0 0 auto; width: 37px; height: 37px; border-radius: 13px; background: rgba(36,75,58,.08); color: var(--green); font-size: 1rem; }
+    section { padding: clamp(72px, 9vw, 112px) 0; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 38px; }
+    .section-heading > div:first-child { max-width: 650px; }
+    .section-heading .lede { max-width: 400px; font-size: 1rem; }
+    .strengths-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .strength-card { padding: 26px; border: 1px solid var(--line); background: var(--white); border-radius: var(--radius); }
+    .card-number { display: inline-grid; place-items: center; width: 42px; height: 42px; margin-bottom: 22px; border-radius: 14px; color: var(--green); background: var(--mint); font: 800 .85rem "Manrope", sans-serif; }
+    .strength-card h3 { margin-bottom: 10px; }
+    .strength-card p { margin-bottom: 0; color: var(--muted); font-size: .94rem; }
+    .languages { background: var(--green-dark); color: white; }
+    .languages .eyebrow { color: #d9e6d9; }
+    .languages .lede { color: rgba(255,255,255,.68); }
+    .languages .section-heading { margin-bottom: 34px; }
+    .language-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+    .language-card { min-height: 205px; padding: 25px; border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.055); border-radius: 20px; }
+    .language-top { display: flex; justify-content: space-between; align-items: start; gap: 10px; }
+    .language-code { color: #f0c4a5; font: 700 .78rem "Manrope",sans-serif; letter-spacing: .09em; }
+    .language-card h3 { margin: 14px 0 6px; font-size: 1.3rem; }
+    .language-level { color: white; font-weight: 600; font-size: .91rem; }
+    .language-note { margin: 12px 0 0; color: rgba(255,255,255,.62); font-size: .86rem; }
+    .experience-list { border-top: 1px solid var(--line); }
+    .experience { display: grid; grid-template-columns: 190px minmax(0,1fr); gap: 32px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+    .experience-date { color: var(--muted); font-size: .88rem; font-weight: 600; }
+    .experience-date span { display: block; color: var(--orange); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+    .experience-main h3 { margin-bottom: 4px; font-size: 1.34rem; }
+    .company { margin-bottom: 15px; color: var(--green); font-size: .92rem; font-weight: 700; }
+    .experience-main ul { margin: 0; padding-left: 19px; color: var(--muted); }
+    .experience-main li { padding-left: 3px; margin: 6px 0; }
+    .experience-main li::marker { color: var(--orange); }
+    .education-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
+    .education-card { padding: 29px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+    .education-card h3 { margin-bottom: 8px; }
+    .education-card p { margin-bottom: 0; color: var(--muted); }
+    .education-date { margin-bottom: 12px; color: var(--orange); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .credentials { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 9px; }
+    .pill { padding: 8px 12px; color: #405448; background: var(--mint); border-radius: 999px; font-size: .82rem; font-weight: 600; }
+    .leadership { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: start; }
+    .leadership-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .leadership-item { padding: 19px; border: 1px solid var(--line); border-radius: 17px; }
+    .leadership-item strong { display: block; margin-bottom: 5px; font-size: .95rem; }
+    .leadership-item span { color: var(--muted); font-size: .86rem; }
+    .contact { padding-top: 30px; }
+    .contact-card { display: flex; justify-content: space-between; align-items: center; gap: 40px; padding: clamp(28px, 5vw, 52px); background: #e6e9dd; border: 1px solid rgba(36,75,58,.13); border-radius: 28px; }
+    .contact-card h2 { max-width: 550px; margin-bottom: 12px; font-size: clamp(2rem, 4vw, 3.1rem); }
+    .contact-card p { max-width: 520px; margin-bottom: 0; color: var(--muted); }
+    .contact-actions { display: flex; flex-direction: column; gap: 10px; min-width: 210px; }
+    footer { padding: 25px 0 35px; color: var(--muted); font-size: .82rem; }
+    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; padding-top: 20px; border-top: 1px solid var(--line); }
+    .backtop { text-decoration: none; font-weight: 700; color: var(--green); }
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 45px; }
+      .profile-panel { width: min(100%, 390px); min-height: 330px; margin-inline: auto; }
+      .strip-inner { grid-template-columns: repeat(2,1fr); }
+      .section-heading { display: block; }
+      .section-heading .lede { margin-top: 15px; }
+      .strengths-grid { grid-template-columns: repeat(2,1fr); }
+      .language-grid { grid-template-columns: 1fr; }
+      .language-card { min-height: unset; }
+      .experience { grid-template-columns: 135px minmax(0,1fr); gap: 20px; }
+      .leadership { grid-template-columns: 1fr; gap: 18px; }
+      .contact-card { align-items: start; flex-direction: column; }
+      .contact-actions { flex-direction: row; flex-wrap: wrap; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 30px, 1160px); }
+      .nav { min-height: 68px; }
+      .navlinks { gap: 11px; }
+      .navlinks a:not(.nav-cta) { display: none; }
+      .navlinks .nav-cta { padding: 10px 14px; font-size: .82rem; }
+      .hero { padding-top: 68px; }
+      h1 { font-size: clamp(2.7rem, 13vw, 4rem); }
+      .strip-inner { gap: 14px 10px; }
+      .strip-item { align-items: flex-start; font-size: .79rem; }
+      .strip-icon { width: 32px; height: 32px; }
+      .strengths-grid { grid-template-columns: 1fr; }
+      .strength-card { padding: 23px; }
+      .experience { grid-template-columns: 1fr; gap: 7px; padding: 24px 0; }
+      .education-grid { grid-template-columns: 1fr; }
+      .leadership-list { grid-template-columns: 1fr; }
+      .profile-panel { padding: 20px; }
+      .actions .btn { width: 100%; }
+      .contact-actions { flex-direction: column; width: 100%; }
+      .contact-actions .btn { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Aminat Abesin, home">
+        <span class="brandmark">AA</span><span>Aminat Abesin</span>
+      </a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#languages">Languages</a>
+        <a class="nav-cta" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid wrap">
+        <div class="hero-copy">
+          <span class="eyebrow">Customer service · Client operations</span>
+          <h1>Good service starts with <span>understanding people.</span></h1>
+          <p class="lede">I'm Aminat Abesin, a customer service and client operations professional with experience across aviation, logistics, and real estate. I bring thoughtful communication, careful follow-through, and a multilingual perspective to every customer interaction.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#experience">Explore my experience <span aria-hidden="true">↘</span></a>
+            <a class="btn btn-secondary" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-note"><span class="dot" aria-hidden="true"></span> Open to customer service, client experience, and operations opportunities.</div>
+        </div>
+        <aside class="profile-panel" aria-label="Professional profile">
+          <div class="profile-top"><span>PROFESSIONAL PROFILE</span><span>01 / 04</span></div>
+          <div class="profile-monogram" aria-hidden="true">AA</div>
+          <div class="profile-name">Aminat Abesin</div>
+          <div class="profile-role">Customer Service &amp; Client Operations</div>
+          <div class="profile-foot"><span>Based in Lagos, Nigeria</span><span>People-first mindset</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="strip" aria-label="Professional strengths">
+      <div class="strip-inner wrap">
+        <div class="strip-item"><span class="strip-icon" aria-hidden="true">↗</span><span>Customer enquiries &amp; care</span></div>
+        <div class="strip-item"><span class="strip-icon" aria-hidden="true">◎</span><span>Complaint resolution</span></div>
+        <div class="strip-item"><span class="strip-icon" aria-hidden="true">⌁</span><span>Travel &amp; reservations</span></div>
+        <div class="strip-item"><span class="strip-icon" aria-hidden="true">文</span><span>Multilingual communication</span></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">What I bring</span><h2>Reliable service.<br>Clear communication.</h2></div>
+          <p class="lede">From resolving a customer concern to keeping a transaction moving, I value accuracy, empathy, and closing the loop so people know what happens next.</p>
+        </div>
+        <div class="strengths-grid">
+          <article class="strength-card"><span class="card-number">01</span><h3>Customer support</h3><p>Handles around 50 customer interactions daily in an aviation setting, responding to enquiries and supporting ticket reservations.</p></article>
+          <article class="strength-card"><span class="card-number">02</span><h3>Complaint handling</h3><p>Addresses logistics customer complaints and works to resolve issues within her authority, escalating matters that require management involvement.</p></article>
+          <article class="strength-card"><span class="card-number">03</span><h3>Client coordination</h3><p>Follows property transactions through the process, manages paperwork, and follows up with clients—supporting at least three transactions per month.</p></article>
+          <article class="strength-card"><span class="card-number">04</span><h3>Travel operations</h3><p>Supports ticket reservations, travel-related customer enquiries, and travel-agent relationships, with knowledge of fare rules and booking processes.</p></article>
+          <article class="strength-card"><span class="card-number">05</span><h3>Administration &amp; records</h3><p>Maintains customer information and documentation, coordinates tasks, and supports organised day-to-day operations.</p></article>
+          <article class="strength-card"><span class="card-number">06</span><h3>Cross-cultural communication</h3><p>Combines French-language proficiency with ongoing Mandarin Chinese training to keep developing her ability to connect across languages and cultures.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="languages" id="languages">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">Languages</span><h2>Communication across cultures.</h2></div>
+          <p class="lede">French is a core strength. Mandarin Chinese is an active area of study, supported by professional language training.</p>
+        </div>
+        <div class="language-grid">
+          <article class="language-card">
+            <div class="language-top"><span class="language-code">FR · FRENCH</span><span aria-hidden="true">✳</span></div>
+            <h3>French</h3><div class="language-level">C1 proficiency</div>
+            <p class="language-note">B.A.Ed. in French Education; well suited to roles supporting French-speaking customers.</p>
+          </article>
+          <article class="language-card">
+            <div class="language-top"><span class="language-code">中文 · MANDARIN</span><span aria-hidden="true">学</span></div>
+            <h3>Mandarin Chinese</h3><div class="language-level">HSK 2 level · Currently learning</div>
+            <p class="language-note">Professional language course issued by the Confucius Institute. Listed as a developing skill, not fluent proficiency.</p>
+          </article>
+          <article class="language-card">
+            <div class="language-top"><span class="language-code">EN / YO</span><span aria-hidden="true">↔</span></div>
+            <h3>English &amp; Yoruba</h3><div class="language-level">English: Fluent · Yoruba: Native</div>
+            <p class="language-note">Confident communication with a range of customers and colleagues in everyday service settings.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">Career experience</span><h2>Experience built around people and details.</h2></div>
+          <p class="lede">Experience across service-facing and administrative roles, with an emphasis on clear communication, accurate documentation, and follow-through.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience">
+            <div class="experience-date"><span>2026 — Present</span>Current role</div>
+            <div class="experience-main">
+              <h3>Administrative Assistant</h3><div class="company">Magabby Logistics</div>
+              <ul>
+                <li>Handle customer complaints and work toward timely resolution when the matter does not require management intervention.</li>
+                <li>Support shipment tracking, documentation updates, and customer communication.</li>
+                <li>Maintain organised transaction and client records while supporting daily operations.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience">
+            <div class="experience-date"><span>2023 — 2026</span>Travel services</div>
+            <div class="experience-main">
+              <h3>Airfare Ticketing &amp; Reservations / Customer Support</h3><div class="company">Abilfat Aviation Company</div>
+              <ul>
+                <li>Handle approximately 50 customer interactions per day, responding to enquiries and supporting ticket reservations.</li>
+                <li>Manage travel-agent relationships and provide guidance on bookings, fare rules, changes, and related service requests.</li>
+                <li>Communicate with customers and partners to clarify information, follow up on requests, and support issue resolution.</li>
+                <li>Maintain accurate booking information, customer records, and supporting documentation.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience">
+            <div class="experience-date"><span>2017 — 2020</span>Property services</div>
+            <div class="experience-main">
+              <h3>Administrative Assistant</h3><div class="company">TUNEXWORLD Homes and Properties</div>
+              <ul>
+                <li>Managed client records, transaction paperwork, and administrative documentation.</li>
+                <li>Followed up with clients and supported property transactions through the closing process.</li>
+                <li>Contributed to the coordination of at least three property transactions per month, working alongside other team members.</li>
+                <li>Coordinated operational tasks and communicated with internal and external stakeholders.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">Education &amp; training</span><h2>A foundation in language, service, and learning.</h2></div>
+        </div>
+        <div class="education-grid">
+          <article class="education-card">
+            <div class="education-date">2019 — 2023</div>
+            <h3>Bachelor of Arts / Education (French Education)</h3>
+            <p>Tai Solarin University of Education (TASUED)</p>
+          </article>
+          <article class="education-card">
+            <div class="education-date">Professional training</div>
+            <h3>Mandarin Chinese language course</h3>
+            <p>Confucius Institute · HSK 2 level, currently learning</p>
+          </article>
+          <article class="education-card">
+            <div class="education-date">2022</div>
+            <h3>Certificate in French Language</h3>
+            <p>IUP Pan Africa School, Porto-Novo, Benin Republic</p>
+          </article>
+          <article class="education-card">
+            <div class="education-date">2024</div>
+            <h3>Diploma in Airfare Ticketing &amp; Reservation</h3>
+            <p>Abilfat Aviation Business School</p>
+          </article>
+        </div>
+        <div class="credentials" aria-label="Additional training">
+          <span class="pill">HRM &amp; Customer Service — Mastercard</span>
+          <span class="pill">Customer records &amp; documentation</span>
+          <span class="pill">Travel booking support</span>
+          <span class="pill">Complaint handling</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership">
+      <div class="wrap leadership">
+        <div><span class="eyebrow">Leadership &amp; service</span><h2>Contributing beyond the job description.</h2><p class="lede">Leadership roles have strengthened her experience with communication, coordination, and working with others toward a shared goal.</p></div>
+        <div class="leadership-list">
+          <article class="leadership-item"><strong>Vice President</strong><span>National French Students Association, TASUED Chapter · 2023</span></article>
+          <article class="leadership-item"><strong>Regional Secretary</strong><span>Lions Club · 2023</span></article>
+          <article class="leadership-item"><strong>CDS Secretary</strong><span>NYSC · ICT &amp; Education · 2025</span></article>
+          <article class="leadership-item"><strong>Core strengths</strong><span>Communication · Organisation · Follow-through · Collaboration</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-card">
+          <div>
+            <span class="eyebrow">Let's connect</span>
+            <h2>Looking for someone who cares about the customer experience?</h2>
+            <p>I'm open to customer service, customer experience, client support, and operations opportunities—remote, hybrid, or on-site.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:aminatabesin523@gmail.com">Email Aminat <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="tel:+2349162070665">Call +234 916 207 0665</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner wrap"><span>© <span id="year">2026</span> Aminat Abesin. Built around thoughtful service.</span><a class="backtop" href="#top">Back to top ↑</a></div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
