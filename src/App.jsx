@@ -6,11 +6,6 @@ import {
   ShieldCheck, Sparkles, Sun, UserRoundCheck, X
 } from "lucide-react";
 import { jsPDF } from "jspdf";
-import profilePart1 from "./assets/aminat-profile-part-1.txt?raw";
-import profilePart2 from "./assets/aminat-profile-part-2.txt?raw";
-import profilePart3 from "./assets/aminat-profile-part-3.txt?raw";
-
-const profileImage = "data:image/webp;base64," + profilePart1 + profilePart2 + profilePart3;
 
 const experience = [
   {
@@ -266,7 +261,7 @@ export default function App() {
               <div className="hero-signals"><span><span className="signal-dot"/>Open to customer service opportunities</span><span><MapPin size={15}/> Lagos, Nigeria · Remote, hybrid &amp; on-site</span></div>
             </div>
             <motion.div className="hero-visual" initial={reduceMotion ? false : {opacity:0,scale:.94,y:18}} animate={{opacity:1,scale:1,y:0}} transition={{duration:.75,delay:.12}}>
-              <div className="portrait-frame"><img src={profileImage} alt="Professional portrait of Aminat Abesin" fetchPriority="high"/><span className="portrait-sticker">CLIENT<br/>SUPPORT <BriefcaseBusiness size={16}/></span></div>
+              <div className="portrait-frame"><img src="/assets/aminat-profile.webp" alt="Professional portrait of Aminat Abesin" fetchPriority="high"/><span className="portrait-sticker">CLIENT<br/>SUPPORT <BriefcaseBusiness size={16}/></span></div>
               <motion.div className="floating-card floating-card--top" animate={reduceMotion ? {} : {y:[0,-7,0]}} transition={{duration:4,repeat:Infinity,ease:"easeInOut"}}><span className="mini-icon mini-icon--mint"><Languages size={18}/></span><span><strong>French C1</strong><small>Multilingual service</small></span></motion.div>
               <motion.div className="floating-card floating-card--bottom" animate={reduceMotion ? {} : {y:[0,6,0]}} transition={{duration:4.5,repeat:Infinity,ease:"easeInOut"}}><span className="mini-icon mini-icon--yellow"><UserRoundCheck size={18}/></span><span><strong>50+ interactions</strong><small>Handled per day in aviation</small></span></motion.div>
               <div className="portrait-note">Customer service · Client operations</div>
