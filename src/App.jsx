@@ -9,17 +9,17 @@ import { jsPDF } from "jspdf";
 
 const experience = [
   {
-    period: "2026 — PRESENT", number: "01", role: "Administrative Assistant",
+    period: "2026 — PRESENT", number: "01", role: "Customer Service & Logistics Support",
     company: "Magabby Logistics", type: "LOGISTICS & CUSTOMER CARE",
-    summary: "Helping customers get answers, keeping records accurate, and making sure service issues do not fall through the cracks.",
+    summary: "Responding to customer concerns, handling first-line complaints, and keeping customers informed about shipment progress and service issues.",
     points: [
       "Handle customer complaints and resolve issues within my authority, escalating matters that need management involvement.",
-      "Support shipment tracking and documentation updates while keeping customers informed.",
-      "Maintain organised transaction and client records and support smooth day-to-day operations."
+      "Provide shipment-tracking updates and explain delivery progress or documentation requirements clearly to customers.",
+      "Maintain accurate customer, shipment and case records to support complaint resolution and consistent customer follow-up."
     ]
   },
   {
-    period: "2023 — 2026", number: "02", role: "Airfare Ticketing & Reservations / Customer Support",
+    period: "2023 — 2026", number: "02", role: "Customer Service & Airfare Ticketing / Reservations",
     company: "Abilfat Aviation Company", type: "AVIATION & TRAVEL SERVICES",
     summary: "Supporting customers and travel agents through enquiries, reservations, and the details that make travel arrangements easier to navigate.",
     points: [
@@ -30,14 +30,14 @@ const experience = [
     ]
   },
   {
-    period: "2017 — 2020", number: "03", role: "Administrative Assistant",
+    period: "2017 — 2020", number: "03", role: "Customer Service & Property Client Support",
     company: "TUNEXWORLD Homes and Properties", type: "REAL ESTATE & CLIENT OPERATIONS",
-    summary: "Coordinating the paperwork and client follow-up that help property transactions keep moving.",
+    summary: "Responding to property enquiries, guiding clients through service steps, and following up as property transactions progress.",
     points: [
-      "Managed client records, transaction paperwork, and administrative documentation.",
-      "Followed up with clients and supported property transactions through the closing process.",
-      "Contributed to coordinating at least three property transactions per month alongside other team members.",
-      "Coordinated operational tasks and communicated with internal and external stakeholders."
+      "Responded to customer enquiries about property sales, rentals, availability and viewing arrangements, providing clear information and timely follow-up.",
+      "Guided clients through transaction documentation requirements and kept them informed as property transactions progressed through closing stages.",
+      "Contributed to at least three property transactions per month through client follow-up, documentation coordination and transaction support.",
+      "Addressed client questions and documentation gaps, coordinating with colleagues and external stakeholders to keep customers updated."
     ]
   }
 ];
@@ -73,13 +73,13 @@ const cv = {
   name: "Abesin Oluwaseun Aminat",
   title: "CUSTOMER SERVICE & CLIENT OPERATIONS",
   contact: "Lagos, Nigeria | +234 916 207 0665 | aminatabesin523@gmail.com",
-  summary: "Customer service and client operations professional with experience across aviation, logistics, and real estate. Handles customer enquiries, reservations, complaints, travel-agent relationships, transaction paperwork, and client follow-up. French C1 proficiency with ongoing Mandarin Chinese training at HSK 2 level through the Confucius Institute.",
+  summary: "Customer service professional with customer-facing experience across aviation, logistics, and real estate. Skilled in handling customer enquiries, reservations, complaints, travel-agent relationships, client follow-up, and service documentation. French C1 proficiency with ongoing Mandarin Chinese training at HSK 2 level through the Confucius Institute.",
   strengths: [
     "Customer support and client relations",
     "Complaint handling, escalation, and issue resolution",
     "Ticketing, reservations, fare rules, and travel-agent coordination",
     "Client follow-up, property transaction paperwork, and documentation",
-    "Customer records, administrative support, and operational coordination",
+    "Customer records, service documentation, and case coordination",
     "Multichannel communication and cross-team collaboration"
   ],
   education: [
