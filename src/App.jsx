@@ -120,8 +120,8 @@ function buildPdf() {
   const pageHeight = doc.internal.pageSize.getHeight();
   const margin = 17, width = pageWidth - margin * 2;
   let y = 18;
-  const purple = [105, 61, 224], coral = [250, 99, 76];
-  const ink = [35, 27, 49], muted = [105, 97, 121];
+  const purple = [83, 105, 96], coral = [130, 154, 145];
+  const ink = [23, 43, 58], muted = [98, 112, 122];
   const ensure = (height = 8) => {
     if (y + height > pageHeight - 17) {
       doc.addPage(); y = 19;
@@ -169,7 +169,7 @@ function downloadWord() {
   const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   const list = (arr) => "<ul>" + arr.map((v) => "<li>" + esc(v) + "</li>").join("") + "</ul>";
   const jobs = experience.map((job) => "<h3>" + esc(job.role) + "</h3><p class='meta'>" + esc(job.company + " | " + job.period) + "</p>" + list(job.points)).join("");
-  const html = `<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;color:#251a32;line-height:1.45;margin:34pt}h1{font-size:23pt;margin-bottom:3pt}h2{font-size:13pt;color:#6e38e8;border-bottom:2px solid #ff6248;padding-bottom:4pt;margin-top:19pt}h3{font-size:11pt;margin:12pt 0 2pt}.meta{font-weight:bold;color:#6e38e8;font-size:9pt}p,li{font-size:10pt}ul{margin-top:4pt}.title{font-weight:bold;color:#6e38e8;letter-spacing:1pt;font-size:9pt}.muted{color:#70647a;font-size:9pt}</style></head><body><h1>${esc(cv.name)}</h1><p class="title">${esc(cv.title)}</p><p class="muted">${esc(cv.contact)}</p><h2>Professional Summary</h2><p>${esc(cv.summary)}</p><h2>Core Strengths</h2>${list(cv.strengths)}<h2>Professional Experience</h2>${jobs}<h2>Education &amp; Professional Training</h2>${list(cv.education.concat("HRM & Customer Service | Mastercard"))}<h2>Languages</h2>${list(cv.languages)}<h2>Leadership</h2>${list(cv.leadership)}<p>References available on request.</p></body></html>`;
+  const html = `<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;color:#172b3a;line-height:1.55;margin:34pt}h1{font-size:23pt;margin-bottom:3pt}h2{font-size:13pt;color:#536a60;border-bottom:1px solid #829a91;padding-bottom:4pt;margin-top:19pt}h3{font-size:11pt;margin:12pt 0 2pt}.meta{font-weight:bold;color:#536a60;font-size:9pt}p,li{font-size:10pt}ul{margin-top:4pt}.title{font-weight:bold;color:#536a60;letter-spacing:1pt;font-size:9pt}.muted{color:#61717b;font-size:9pt}</style></head><body><h1>${esc(cv.name)}</h1><p class="title">${esc(cv.title)}</p><p class="muted">${esc(cv.contact)}</p><h2>Professional Summary</h2><p>${esc(cv.summary)}</p><h2>Core Strengths</h2>${list(cv.strengths)}<h2>Professional Experience</h2>${jobs}<h2>Education &amp; Professional Training</h2>${list(cv.education.concat("HRM & Customer Service | Mastercard"))}<h2>Languages</h2>${list(cv.languages)}<h2>Leadership</h2>${list(cv.leadership)}<p>References available on request.</p></body></html>`;
   const blob = new Blob(["\ufeff", html], { type: "application/msword;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a"); a.href = url; a.download = "Abesin_Oluwaseun_Aminat_Master_CV.doc";
@@ -194,7 +194,7 @@ export default function App() {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#15131d" : "#fffaf3");
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#141C24" : "#F7F6F2");
     try { localStorage.setItem("aminat-theme", theme); } catch {}
   }, [theme]);
 
@@ -251,9 +251,9 @@ export default function App() {
           <div className="hero-orbit hero-orbit--two" aria-hidden="true"/>
           <div className="hero-grid container">
             <div className="hero-copy">
-              <motion.div initial={reduceMotion ? false : {opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:.5}} className="eyebrow"><span className="eyebrow-dot"/> CUSTOMER SERVICE · CLIENT SUPPORT · OPERATIONS</motion.div>
-              <motion.h1 initial={reduceMotion ? false : {opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.08}} className="hero-title">Customer Service<br/><span>&amp; Client Operations</span></motion.h1>
-              <motion.p initial={reduceMotion ? false : {opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.15}} className="hero-intro">Customer service and client operations professional with experience across aviation, logistics, and real estate. Skilled in handling customer enquiries, managing ticket reservations, coordinating with travel agents, resolving complaints, maintaining documentation, and following up with clients. Offers C1 French proficiency and ongoing Mandarin Chinese training through the Confucius Institute.</motion.p>
+              <motion.div initial={reduceMotion ? false : {opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:.5}} className="eyebrow"><span className="eyebrow-dot"/> CUSTOMER SERVICE PROFESSIONAL · FRENCH C1</motion.div>
+              <motion.h1 initial={reduceMotion ? false : {opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.08}} className="hero-title">Creating better<br/><span>customer experiences.</span></motion.h1>
+              <motion.p initial={reduceMotion ? false : {opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.15}} className="hero-intro">Customer service professional with experience across aviation, logistics, and real estate. I support customers through enquiries, reservations, complaints, and follow-up, with a focus on clear communication and reliable service. I also bring C1 French proficiency and ongoing Mandarin Chinese study through the Confucius Institute.</motion.p>
               <motion.div initial={reduceMotion ? false : {opacity:0,y:18}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.22}} className="hero-actions">
                 <button className="button button--dark" onClick={buildPdf}><Download size={17}/> Download my CV <ArrowDownRight size={17}/></button>
                 <ButtonLink href="#experience" kind="outline">Explore my work <ArrowDown size={16}/></ButtonLink>
@@ -284,7 +284,7 @@ export default function App() {
             <div className="strength-grid">
               {strengths.map((item,index)=>{const Icon=item.icon;return <Reveal key={item.no} delay={index*.07}><article className={`strength-card strength-card--${index+1}`}><div className="strength-card-top"><span className="strength-number">{item.no}</span><span className="strength-icon"><Icon size={22}/></span></div><h3>{item.title}</h3><p>{item.text}</p><ArrowUpRight className="card-arrow" size={18}/></article></Reveal>;})}
             </div>
-            <Reveal className="stats-panel"><div className="stats-intro"><span className="section-kicker">THE WORK IN NUMBERS</span><h3>Steady service.<br/>Careful follow-through.</h3></div><div className="stat"><strong>50<span>+</span></strong><p>Customer interactions<br/>handled per day in aviation</p></div><div className="stat"><strong>3<span>+</span></strong><p>Property transactions<br/>supported per month</p></div><div className="stat stat-note"><Sparkles size={20}/><p>Focused on clear communication, accurate records, and reliable follow-up.</p></div></Reveal>
+            <Reveal className="stats-panel"><div className="stats-intro"><span className="section-kicker">THE WORK IN NUMBERS</span><h3>Steady service.<br/>Careful follow-through.</h3></div><div className="stat"><strong>50<span>+</span></strong><p>Customer interactions<br/>handled per day in aviation</p></div><div className="stat"><strong>3<span>+</span></strong><p>Property transactions<br/>supported per month</p></div><div className="stat stat-note"><CheckCircle2 size={20}/><p>Focused on clear communication, accurate records, and reliable follow-up.</p></div></Reveal>
           </div>
         </section>
 
