@@ -106,9 +106,10 @@ const translations = {
     languageLabel: "Choose portfolio language",
     languageNames: { en: "English", fr: "French", zh: "Chinese" },
     navLabel: "Main navigation",
-    nav: { about: "About", experience: "Experience", languages: "Languages", education: "Education", contact: "Contact", talk: "Let's talk", getInTouch: "Get in touch" },
+    nav: { about: "About", experience: "Experience", languages: "Languages", education: "Education", leadership: "Leadership", contact: "Contact", talk: "Let's talk", getInTouch: "Get in touch" },
     brandSubtitle: "Customer service & client experience",
     theme: { dark: "Dark", light: "Light", switchDark: "Switch to dark theme", switchLight: "Switch to light theme", toggle: "Toggle colour theme" },
+    menu: { open: "Open menu", close: "Close menu" },
     hero: {
       eyebrow: "CUSTOMER SERVICE PROFESSIONAL · FRENCH C1",
       titleA: "Creating better",
@@ -265,9 +266,10 @@ const translations = {
     languageLabel: "Choisir la langue du portfolio",
     languageNames: { en: "Anglais", fr: "Français", zh: "Chinois" },
     navLabel: "Navigation principale",
-    nav: { about: "À propos", experience: "Expérience", languages: "Langues", education: "Formation", contact: "Contact", talk: "Me contacter", getInTouch: "Prendre contact" },
+    nav: { about: "À propos", experience: "Expérience", languages: "Langues", education: "Formation", leadership: "Engagement", contact: "Contact", talk: "Me contacter", getInTouch: "Prendre contact" },
     brandSubtitle: "Service client et expérience client",
     theme: { dark: "Sombre", light: "Clair", switchDark: "Passer au thème sombre", switchLight: "Passer au thème clair", toggle: "Changer de thème" },
+    menu: { open: "Ouvrir le menu", close: "Fermer le menu" },
     hero: {
       eyebrow: "PROFESSIONNELLE DU SERVICE CLIENT · FRANÇAIS C1",
       titleA: "Créer de meilleures",
@@ -424,9 +426,10 @@ const translations = {
     languageLabel: "选择作品集语言",
     languageNames: { en: "英语", fr: "法语", zh: "中文" },
     navLabel: "主导航",
-    nav: { about: "关于我", experience: "工作经历", languages: "语言能力", education: "教育背景", contact: "联系方式", talk: "联系我", getInTouch: "联系 Aminat" },
+    nav: { about: "关于我", experience: "工作经历", languages: "语言能力", education: "教育背景", leadership: "领导力", contact: "联系方式", talk: "联系我", getInTouch: "联系 Aminat" },
     brandSubtitle: "客户服务与客户体验",
     theme: { dark: "深色", light: "浅色", switchDark: "切换至深色模式", switchLight: "切换至浅色模式", toggle: "切换显示主题" },
+    menu: { open: "打开菜单", close: "关闭菜单" },
     hero: {
       eyebrow: "客户服务专业人士 · 法语 C1",
       titleA: "创造更好的",
@@ -713,7 +716,7 @@ export default function App() {
     ["experience", c.nav.experience],
     ["languages", c.nav.languages],
     ["education", c.nav.education],
-    ["leadership", c.leadership.kicker.split(" / ")[1].split(" ")[0]],
+    ["leadership", c.nav.leadership],
   ];
   const closeMenu = () => setMenuOpen(false);
   const languageChoices = [["en", "EN"], ["fr", "FR"], ["zh", "中文"]];
@@ -759,7 +762,7 @@ export default function App() {
             <button className="theme-toggle theme-toggle--mobile" onClick={() => setTheme(theme === "light" ? "dark" : "light")} aria-label={c.theme.toggle}>
               {theme === "light" ? <Moon size={18}/> : <Sun size={18}/>}
             </button>
-            <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen}>
+            <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? c.menu.close : c.menu.open} aria-expanded={menuOpen}>
               {menuOpen ? <X size={21}/> : <Menu size={21}/>}
             </button>
           </div>
